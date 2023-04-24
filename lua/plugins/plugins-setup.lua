@@ -25,6 +25,7 @@ vim.cmd([[
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- 包管理插件
   use 'folke/tokyonight.nvim' -- 主题
+  use "fatih/vim-go"
   use {
     'nvim-lualine/lualine.nvim',  -- 状态栏
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- 状态栏图标
@@ -60,6 +61,7 @@ return require('packer').startup(function(use)
   use {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
   use 'junegunn/fzf.vim'
 
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
 
   if packer_bootstrap then
     require('packer').sync()
