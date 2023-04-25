@@ -59,9 +59,13 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim" -- 左则git提示
 
   use {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
-  use 'junegunn/fzf.vim'
+  use 'junegunn/fzf.vim' -- 文件查找
 
-  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*'} -- 终端
+  use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   if packer_bootstrap then
     require('packer').sync()

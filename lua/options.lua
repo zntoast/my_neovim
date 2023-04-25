@@ -33,3 +33,6 @@ opt.smartcase = true
 opt.termguicolors = true -- 终端真颜色
 opt.signcolumn = "yes"
 vim.cmd[[colorscheme tokyonight-moon]] --主题
+
+-- 打通系统剪切版
+clipboard = unnamedplus
