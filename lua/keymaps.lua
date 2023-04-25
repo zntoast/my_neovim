@@ -25,6 +25,8 @@ keymap.set("n","<leader>nh",":nohl<CR>")
 -- ---------- 插件 ---------- ---
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- Aarkdown open-stop 
+keymap.set("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
 -- 切换buffer
 keymap.set("n", "<A-l>", ":bnext<CR>")
 keymap.set("n", "<A-h>", ":bprevious<CR>")
