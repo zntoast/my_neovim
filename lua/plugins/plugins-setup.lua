@@ -24,6 +24,12 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- 包管理插件
+  use { -- 首界面主题
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
   use 'folke/tokyonight.nvim' -- 主题
   use "fatih/vim-go"
   use {
@@ -66,7 +72,7 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
   })
-
+  use "puremourning/vimspector" -- 断点调试
   if packer_bootstrap then
     require('packer').sync()
   end
