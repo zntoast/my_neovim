@@ -68,7 +68,7 @@ return require('packer').startup(function(use)
   use 'junegunn/fzf.vim' -- 文件查找
 
   use {"akinsho/toggleterm.nvim", tag = 'v2.*'} -- 终端
-  use({
+  use({ -- md文件预览
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
   })
