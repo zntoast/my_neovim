@@ -26,8 +26,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- 包管理插件
   use { -- 首界面主题
     'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   }
   use 'folke/tokyonight.nvim' -- 主题
