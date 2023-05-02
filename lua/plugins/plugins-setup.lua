@@ -73,7 +73,6 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use "puremourning/vimspector" -- 断点调试
   if packer_bootstrap then
     require('packer').sync()
   end
