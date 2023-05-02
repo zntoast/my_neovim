@@ -27,7 +27,7 @@ opt.splitbelow = true
 
 -- 搜素
 opt.ignorecase = true -- 不区分大小写
-opt.smartcase = true  
+opt.smartcase = true
 
 -- 外观
 opt.termguicolors = true -- 终端真颜色
