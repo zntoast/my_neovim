@@ -15,5 +15,6 @@ require("plugins.comment")
 require("plugins.bufferline")
 require("plugins.gitsigns")
 require("plugins.toggleterm")
+require("plugins.dap-config")
 
 

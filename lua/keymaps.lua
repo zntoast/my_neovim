@@ -41,4 +41,11 @@ keymap.set("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
 keymap.set("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
 keymap.set("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
 keymap.set("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
-
+-- 代码调试
+local dap = require "dap"
+keymap.set("n", "<F5>", dap.continue)
+keymap.set("n", "<F10>", dap.step_over)
+keymap.set("n", "<F11>", dap.step_into)
+keymap.set("n", "<F12>", dap.step_out)
+keymap.set("n", "<leader>db", dap.toggle_breakpoint)
+keymap.set("n", "<leader>ds", dap.terminate)

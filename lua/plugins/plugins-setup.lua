@@ -73,7 +73,10 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} } --断点调试
+  --Debugger
+  use 'mfussenegger/nvim-dap'
+  use "rcarriga/nvim-dap-ui"
+  use 'leoluz/nvim-dap-go'
 
   if packer_bootstrap then
     require('packer').sync()
