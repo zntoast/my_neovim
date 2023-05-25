@@ -1,9 +1,12 @@
 
 local dap = require('dap')
 dap.adapters.delve = {
-    type = "server",
-    host = "127.0.0.1",
-    port = 38697,
+  type = 'server',
+  port = '${port}',
+  executable = {
+    command = 'dlv',
+    args = {'dap', '-l', '127.0.0.1:${port}'},
+  }
 }
 
 dap.configurations.go = {
@@ -29,3 +32,23 @@ dap.configurations.go = {
     program = "./${relativeFileDirname}"
   } 
 }
+
+local dap = require "dap"
+local dapui = require "dapui"
+dap.listeners.after["event_initialized"]["dapui_config"] = function()
+    dapui.open()
+end
+dap.listeners.before["event_terminated"]["dapui_config"] = function()
+    dapui.close()
+end
+dap.listeners.before["event_exited"]["dapui_config"] = function()
+    dapui.close()
+end
+dapui.setup()
+
+
+
+
+
+
+
